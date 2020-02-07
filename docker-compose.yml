@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - 9050:9050
+    tty: true
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: /bin/sh
